@@ -21,13 +21,15 @@ public class Solution {
 
 
 
-        double USdollars = (Euros * exchangeRate) + 0.001;
+        double USdollars = (Euros * exchangeRate);
+
+        double roundDollars = USdollars * 100.0;
+        int dollarsRounded = (int) Math.ceil(roundDollars);
+        double dollarsFinal = dollarsRounded / 100.0;
 
         DecimalFormat format = new DecimalFormat("0.00");
-        int totalPaint = (int) Math.ceil(USdollars);
-        System.out.print(format.format(USdollars));
+        System.out.print(format.format(dollarsFinal));
         System.out.print(" U.S. dollars.");
-
 
     }
 
