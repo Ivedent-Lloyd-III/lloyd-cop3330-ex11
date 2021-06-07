@@ -17,10 +17,6 @@ public class Solution {
         int Euros = Euros();
         double exchangeRate = Rate();
 
-        System.out.println(+Euros+" euros at an exchange rate of "+exchangeRate+" is ");
-
-
-
         double USdollars = (Euros * exchangeRate);
 
         double roundDollars = USdollars * 100.0;
@@ -28,8 +24,8 @@ public class Solution {
         double dollarsFinal = dollarsRounded / 100.0;
 
         DecimalFormat format = new DecimalFormat("0.00");
-        System.out.print(format.format(dollarsFinal));
-        System.out.print(" U.S. dollars.");
+
+        System.out.println(+Euros+" euros at an exchange rate of "+exchangeRate+" is "+format.format(dollarsFinal)+" U.S. dollars.");
 
     }
 
